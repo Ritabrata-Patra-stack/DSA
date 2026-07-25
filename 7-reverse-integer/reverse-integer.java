@@ -10,6 +10,8 @@ class Solution {
                
           if(reverse > Integer.MAX_VALUE || reverse < Integer.MIN_VALUE)
                 return 0;
+
+                
         return (int)reverse;
     }   
 }
