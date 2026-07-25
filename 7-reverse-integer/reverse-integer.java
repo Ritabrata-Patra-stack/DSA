@@ -3,17 +3,12 @@ class Solution {
         long reverse = 0;
         while(x!=0)
         {
-            int d = x%10;
-            
-           
+            int d = x%10;  
             reverse = reverse * 10 + d;
             x /= 10;
         }
-            
-
-            
-        
-         if(reverse > Integer.MAX_VALUE || reverse < Integer.MIN_VALUE)
+               
+          if(reverse > Integer.MAX_VALUE || reverse < Integer.MIN_VALUE)
                 return 0;
         return (int)reverse;
     }   
