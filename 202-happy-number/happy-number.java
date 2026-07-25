@@ -2,7 +2,7 @@ class Solution {
     public boolean isHappy(int n) {
         HashSet <Integer> ans = new HashSet<>();
         int x = n;
-        for(int i = 1; i<=n;i++)
+        while(n!=0)
         {
             x = digit(x);
             if(ans.contains(x))
