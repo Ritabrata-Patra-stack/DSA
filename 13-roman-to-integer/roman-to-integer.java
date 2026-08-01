@@ -11,19 +11,14 @@ class Solution {
         int a = 0,b=0;
         for(int i = 0; i<s.length(); i++)
         {
-            if(b<s.length()-1)
-            {
-
             
-            b=b+1;
-            }
-        if(map.get(s.charAt(i)) >= map.get(s.charAt(b))) 
+        if(i < s.length()-1 && map.get(s.charAt(i)) < map.get(s.charAt(i+1)))
         {
-            a = a + map.get(s.charAt(i));
+            a = a - map.get(s.charAt(i));
         }
         else
         {
-            a = a - map.get(s.charAt(i));
+            a = a + map.get(s.charAt(i));
         }
         }
         return a;
