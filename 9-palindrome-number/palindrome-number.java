@@ -5,7 +5,7 @@ class Solution {
         {
             return false;
         }
-        while(cpy != 0)
+        while(cpy > 0)
         {
             rev = 10 * rev+(cpy%10);
             cpy = cpy/10;
