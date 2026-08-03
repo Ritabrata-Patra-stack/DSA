@@ -1,5 +1,8 @@
 class Solution {
     public int longestContinuousSubstring(String s) {
+         if(s == null || s.length()==0){
+            return 0;
+        }
         if(s.length() == 1)
         {
             return 1;
@@ -11,7 +14,6 @@ class Solution {
             if(ch[i]-'a'-1 == ch[i-1]-'a')
             {
                 c++;
-            
             max  = Math.max(c,max);
             }
             else
