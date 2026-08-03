@@ -1,24 +1,22 @@
 class Solution {
     public int longestContinuousSubstring(String s) {
-        int c= 1, max = 0;
         if(s.length() == 1)
         {
             return 1;
         }
-        for(int i = 1; i<s.length(); i++)
+        char[] ch = s.toCharArray();
+        int c =1, max = 1;
+        for(int i = 1; i<ch.length; i++)
         {
-            
-            if(s.charAt(i-1)+1 == s.charAt(i))
+            if(ch[i]-'a'-1 == ch[i-1]-'a')
             {
                 c++;
+            
+            max  = Math.max(c,max);
             }
-            if(c>max)
+            else
             {
-                max = c;
-            }
-            if(s.charAt(i-1)+1 != s.charAt(i))
-            {
-                c = 1;
+                c =1;
             }
         }
         return max;
