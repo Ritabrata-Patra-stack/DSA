@@ -1,5 +1,5 @@
 class Solution {
-     public int value(char c) {
+     private int value(char c) {
         switch (c) {
             case 'I': return 1;
             case 'V': return 5;
