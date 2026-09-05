@@ -3,7 +3,7 @@ class Solution {
         int l = 0;
         int r = s.length-1;
         char temp = 0;
-        while(l<r)
+        while(l<=r)
         {
             temp = s[l];
             s[l] = s[r];
@@ -11,7 +11,5 @@ class Solution {
             l++;
             r--;
         }
-        
-        System.out.println(s);
     }
 }
