@@ -4,17 +4,10 @@ class Solution {
         {
             return false;
         }
-      while(n>2)
+      while(n%2 == 0)
       {
-        if(n%2 == 0)
-        {
             n = n/2;
         }
-        else
-        {
-            return false;
-        }
-      }
-      return true;
+      return n == 1;
     }
 }
