@@ -14,9 +14,9 @@ class Solution {
             sum = (a+b);
             a = b;
             b = sum;
-
         }
         return sum;
         }
+        
     }
 }
