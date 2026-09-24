@@ -1,14 +1,13 @@
 class Solution {
     public int smallestIndex(int[] nums) {
-        int min = Integer.MAX_VALUE;
         for(int i = 0; i<nums.length; i++)
         {
             if(i == sumd(nums[i]))
             {
-                min = Math.min(min,i);
+                return i;
             }
         }
-        return min != Integer.MAX_VALUE? min : -1;
+        return -1;
     }
     private int sumd(int a)
     { 
