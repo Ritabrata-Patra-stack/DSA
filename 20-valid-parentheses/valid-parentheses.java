@@ -1,38 +1,34 @@
 class Solution {
     public boolean isValid(String s) {
-
-        char[] stack = new char[s.length()];
+        char [] stack = new char[s.length()];
         int top = -1;
-
-        for (char ch : s.toCharArray()) {
-
-            // Opening brackets
-            if (ch == '(' || ch == '{' || ch == '[') {
-                stack[++top] = ch;
+        for(char c : s.toCharArray())
+        {
+            if(c  == '(' || c == '{' || c == '[')
+            {
+                stack[++top] = c;
             }
-
-            // Closing brackets
-            else {
-                if (top == -1) {
+            else
+            {
+                if(top == -1)
+                {
                     return false;
                 }
-
                 char open = stack[top--];
-
-                if (ch == ')' && open != '(') {
+                if(c == ')' && open != '(')
+                {
                     return false;
                 }
-
-                if (ch == '}' && open != '{') {
+                if(c == '}' && open != '{')
+                {
                     return false;
                 }
-
-                if (ch == ']' && open != '[') {
+                if(c == ']' && open != '[')
+                {
                     return false;
                 }
             }
         }
-
-        return top == -1;
+     return top == -1;
     }
 }
