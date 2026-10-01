@@ -3,6 +3,8 @@ class Solution {
         int [] arr = new int[26];
         for(int i = 0; i<s.length(); i++)
         {
+            if(arr[s.charAt(i) - 'a'] == 0)
+            {
             for(int j = i+1; j<s.length();j++)
             {
                 if(s.charAt(i) == s.charAt(j))
@@ -14,6 +16,11 @@ class Solution {
             if(arr[s.charAt(i) - 'a'] == 0)
             {
                 return i;
+            }
+            }
+            else
+            {
+                continue;
             }
         }
         return -1;
